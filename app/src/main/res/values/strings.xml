@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">DnD5ECompanion</string>
+    <string name="statRollStyleHeader">Please select your style of stat rolling</string>
+    <string name="statSelectD20">D20</string>
+    <string name="statSelect3D6">3D6</string>
+    <string name="statSelect4D6">4D6</string>
+    <string name="statSelect4D6Low">4d6 (Drop Lowest)</string>
 </resources>
