@@ -7,4 +7,10 @@
     <string name="statSelect4D6Low">4d6 (Drop Lowest)</string>
     <string name="statSelectExtraRoll">Do you want to add an extra roll?</string>
     <string name="statAssignYouRolled">You Rolled</string>
+    <string name="StatStrength">Strength</string>
+    <string name="StatDexterity">Dexterity</string>
+    <string name="StatConstitution" >Constitution</string>
+    <string name="StatIntelligence">Intelligence</string>
+    <string name="StatWisdom">Wisdom</string>
+    <string name="StatCharisma">Charisma</string>
 </resources>

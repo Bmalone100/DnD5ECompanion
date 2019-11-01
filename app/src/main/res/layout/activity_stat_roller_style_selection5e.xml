@@ -34,6 +34,7 @@
         android:layout_height="76dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="24dp"
+        android:onClick="roll4d6Low"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/statSelect5EImage4D6"
         tools:srcCompat="@tools:sample/avatars[8]" />
@@ -44,6 +45,7 @@
         android:layout_height="76dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="24dp"
+        android:onClick="roll4d6"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/statSelect5EImage3D6"
         tools:srcCompat="@tools:sample/avatars[7]" />
@@ -64,6 +66,7 @@
         android:layout_height="76dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="24dp"
+        android:onClick="roll3d6"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/statSelect5EImageD20"
         tools:srcCompat="@tools:sample/avatars[3]" />
@@ -74,6 +77,7 @@
         android:layout_height="76dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="120dp"
+        android:onClick="roll1d20"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@tools:sample/avatars[2]" />

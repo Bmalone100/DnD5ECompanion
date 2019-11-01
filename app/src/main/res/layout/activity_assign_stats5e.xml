@@ -6,14 +6,129 @@
     android:layout_height="match_parent"
     tools:context=".AssignStats5E">
 
+    <EditText
+        android:id="@+id/StatWriteCha"
+        android:layout_width="0dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/StatNameCha"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/StatNameCha"
+        app:layout_constraintTop_toBottomOf="@+id/StatNameCha" />
+
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/StatNameCha"
+        android:layout_width="78dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/StatCharisma"
+        app:layout_constraintEnd_toEndOf="@+id/StatNameCon"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/StatWriteWis" />
+
+    <EditText
+        android:id="@+id/StatWriteWis"
+        android:layout_width="0dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/StatNameWis"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/StatNameWis"
+        app:layout_constraintTop_toBottomOf="@+id/StatNameWis" />
+
+    <TextView
+        android:id="@+id/StatNameWis"
+        android:layout_width="78dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/StatWisdom"
+        app:layout_constraintEnd_toEndOf="@+id/StatNameCon"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/StatWriteInt" />
+
+    <EditText
+        android:id="@+id/StatWriteInt"
+        android:layout_width="0dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/StatNameInt"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/StatNameInt"
+        app:layout_constraintTop_toBottomOf="@+id/StatNameInt" />
+
+    <TextView
+        android:id="@+id/StatNameInt"
+        android:layout_width="78dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/StatIntelligence"
+        app:layout_constraintEnd_toEndOf="@+id/StatNameCon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/StatWriteCon" />
+
+    <EditText
+        android:id="@+id/StatWriteCon"
+        android:layout_width="0dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/StatNameCon"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/StatNameCon"
+        app:layout_constraintTop_toBottomOf="@+id/StatNameCon" />
+
+    <TextView
+        android:id="@+id/StatNameCon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/StatConstitution"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/StatWriteDex" />
+
+    <EditText
+        android:id="@+id/StatWriteDex"
+        android:layout_width="0dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/StatNameDex"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/StatNameDex"
+        app:layout_constraintTop_toBottomOf="@+id/StatNameDex" />
+
+    <TextView
+        android:id="@+id/StatNameDex"
+        android:layout_width="78dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/StatDexterity"
+        app:layout_constraintEnd_toEndOf="@+id/StatNameCon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/StatWriteStr" />
+
+    <TextView
+        android:id="@+id/StatAssignStatList"
         android:layout_width="31dp"
         android:layout_height="281dp"
         android:layout_marginTop="64dp"
         android:layout_marginEnd="64dp"
         android:lineSpacingExtra="10sp"
-        android:text="18 19 2 14 11 3 9"
         android:textAlignment="center"
         android:textSize="24sp"
         android:textStyle="bold"
@@ -21,12 +136,34 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/StatAssignYouRolledView"
         android:layout_width="80dp"
         android:layout_height="23dp"
         android:layout_marginEnd="40dp"
         android:text="@string/statAssignYouRolled"
         android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintBottom_toTopOf="@+id/StatAssignStatList"
         app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/StatNameStr"
+        android:layout_width="78dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/StatStrength"
+        app:layout_constraintEnd_toEndOf="@+id/StatNameDex"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/StatWriteStr"
+        android:layout_width="0dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/StatNameStr"
+        app:layout_constraintStart_toStartOf="@+id/StatNameStr"
+        app:layout_constraintTop_toBottomOf="@+id/StatNameStr" />
 </androidx.constraintlayout.widget.ConstraintLayout>
