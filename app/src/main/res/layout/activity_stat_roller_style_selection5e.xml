@@ -10,6 +10,7 @@
         android:id="@+id/statSelect5EButton4D6Low"
         android:layout_width="72dp"
         android:layout_height="77dp"
+        android:onClick="roll4d6Low"
         android:text="@string/statSelect4D6Low"
         android:textAlignment="center"
         android:textSize="10sp"
@@ -21,6 +22,7 @@
         android:id="@+id/statSelect5EButton4D6"
         android:layout_width="72dp"
         android:layout_height="77dp"
+        android:onClick="roll4d6"
         android:text="@string/statSelect4D6"
         app:layout_constraintBottom_toBottomOf="@+id/statSelect5EImage4D6"
         app:layout_constraintStart_toEndOf="@+id/statSelect5EImage4D6"
@@ -50,6 +52,7 @@
         android:id="@+id/statSelect5EButton3D6"
         android:layout_width="72dp"
         android:layout_height="77dp"
+        android:onClick="roll3d6"
         android:text="@string/statSelect3D6"
         app:layout_constraintBottom_toBottomOf="@+id/statSelect5EImage3D6"
         app:layout_constraintStart_toEndOf="@+id/statSelect5EImage3D6"
@@ -92,9 +95,36 @@
         android:id="@+id/statSelect5EButtonD20"
         android:layout_width="72dp"
         android:layout_height="77dp"
+        android:onClick="roll1d20"
         android:text="@string/statSelectD20"
         app:layout_constraintBottom_toBottomOf="@+id/statSelect5EImageD20"
         app:layout_constraintStart_toEndOf="@+id/statSelect5EImageD20"
         app:layout_constraintTop_toTopOf="@+id/statSelect5EImageD20"
         app:layout_constraintVertical_bias="0.0" />
+
+    <CheckBox
+        android:id="@+id/statSelect5EExtraRollCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="64dp"
+        android:onClick="extraRollChecked"
+        android:text="@string/statSelectExtraRoll"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.529"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/statSelect5EHelpButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:clickable="true"
+        android:onClick="statHelp"
+        app:fabSize="auto"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_help" />
 </androidx.constraintlayout.widget.ConstraintLayout>

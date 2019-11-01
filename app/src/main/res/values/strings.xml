@@ -5,4 +5,6 @@
     <string name="statSelect3D6">3D6</string>
     <string name="statSelect4D6">4D6</string>
     <string name="statSelect4D6Low">4d6 (Drop Lowest)</string>
+    <string name="statSelectExtraRoll">Do you want to add an extra roll?</string>
+    <string name="statAssignYouRolled">You Rolled</string>
 </resources>
