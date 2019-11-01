@@ -4,7 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
+
+import com.google.android.material.snackbar.Snackbar;
 
 public class AssignStats5E extends AppCompatActivity {
 
@@ -20,5 +23,10 @@ public class AssignStats5E extends AppCompatActivity {
 
         TextView StatAssignStatList = findViewById(R.id.StatAssignStatList);
         StatAssignStatList.setText(message);
+    }
+
+    public void statHelp(View view) {
+        Snackbar.make(view, "This page lets you assign your stats, the stats you rolled on the previous page are shown on the right. /nThe racial bonuses are also displayed between the two.", Snackbar.LENGTH_INDEFINITE)
+                .setAction("Action", null).show();
     }
 }
