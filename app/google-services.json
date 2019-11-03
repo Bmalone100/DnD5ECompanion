@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "823659347744",
+    "firebase_url": "https://dnd5ecompanion.firebaseio.com",
+    "project_id": "dnd5ecompanion",
+    "storage_bucket": "dnd5ecompanion.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:823659347744:android:188f67ddc6cfee60bbe145",
+        "android_client_info": {
+          "package_name": "com.example.dnd5ecompanion"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "823659347744-ddksg74kvirv0tssuhjni6co0g8n3kvu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.dnd5ecompanion",
+            "certificate_hash": "5ca714226d3e045885e3eaad9a9b5184cb4c62d5"
+          }
+        },
+        {
+          "client_id": "823659347744-ubfdmav4vu2t05ugbqc8vub0m8u5kjip.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCHIUCE5mskN4jw7ng-itLlWOaTAvNlVNw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "823659347744-ubfdmav4vu2t05ugbqc8vub0m8u5kjip.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
