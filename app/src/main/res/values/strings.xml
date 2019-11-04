@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">DnD5ECompanion</string>
+<<<<<<< HEAD
     <string name="title_activity_login">Sign in</string>
     <string name="activity_login_signOut">Sign out</string>
     <string name="activity_login_delAcc">Delete account</string>
@@ -9,4 +10,19 @@
     <string name="activity_main_NewCharacter">New Character</string>
     <string name="activity_main_ExistingCharacter">Existing Character</string>
     <string name="activity_main_help">Help</string>
+=======
+    <string name="statRollStyleHeader">Please select your style of stat rolling</string>
+    <string name="statSelectD20">D20</string>
+    <string name="statSelect3D6">3D6</string>
+    <string name="statSelect4D6">4D6</string>
+    <string name="statSelect4D6Low">4d6 (Drop Lowest)</string>
+    <string name="statSelectExtraRoll">Do you want to add an extra roll?</string>
+    <string name="statAssignYouRolled">You Rolled</string>
+    <string name="StatStrength">Strength</string>
+    <string name="StatDexterity">Dexterity</string>
+    <string name="StatConstitution" >Constitution</string>
+    <string name="StatIntelligence">Intelligence</string>
+    <string name="StatWisdom">Wisdom</string>
+    <string name="StatCharisma">Charisma</string>
+>>>>>>> 5ddd53db2b7f9f4469f4ad0c118ffb21504c9380
 </resources>
