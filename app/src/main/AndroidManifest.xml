@@ -9,7 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+<<<<<<< HEAD
         <activity android:name=".LoginActivity" />
+=======
+        <activity android:name=".Main_Character_Sheet"></activity>
+        <activity android:name=".AssignStats5E" />
+        <activity android:name=".StatRollerStyleSelection5e" />
+>>>>>>> 5ddd53db2b7f9f4469f4ad0c118ffb21504c9380
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
