@@ -9,4 +9,7 @@
     <string name="activity_main_NewCharacter">New Character</string>
     <string name="activity_main_ExistingCharacter">Existing Character</string>
     <string name="activity_main_help">Help</string>
+    <string name="EnterName">Enter Name:</string>
+    <string name="EnterRace">Enter Race:</string>
+    <string name="Publish">Publish</string>
 </resources>
