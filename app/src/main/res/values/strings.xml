@@ -12,4 +12,5 @@
     <string name="EnterName">Enter Name:</string>
     <string name="EnterRace">Enter Race:</string>
     <string name="Publish">Publish</string>
+    <string name="Confirm">Confirm</string>
 </resources>
