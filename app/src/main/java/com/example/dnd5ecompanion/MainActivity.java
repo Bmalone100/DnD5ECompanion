@@ -46,8 +46,8 @@ public class MainActivity extends AppCompatActivity {
      * Called when the user taps the New Character button
      */
     public void goToCharacterCreator(View view) {
-        //Intent intent = new Intent(this, FirebaseUIActivity.class);
-        //startActivity(intent);
+        Intent characterIntent = new Intent(this, CharacterCreator.class);
+        startActivity(characterIntent);
     }
 
     /**
