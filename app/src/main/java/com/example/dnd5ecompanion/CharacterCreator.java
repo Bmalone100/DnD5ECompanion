@@ -69,7 +69,7 @@ public class CharacterCreator extends AppCompatActivity {
 
         //Database write
         databaseCharacterSheets = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = databaseCharacterSheets.getReference("dnd5ecompanion/CharacterSheets");
+        DatabaseReference myRef = databaseCharacterSheets.getReference("CharacterSheets");
         id = myRef.push().getKey();
         characterSheet aCharacter = new characterSheet(id,name,race);
         myRef.push().setValue(aCharacter);
