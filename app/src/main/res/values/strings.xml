@@ -24,8 +24,38 @@
     <string name="statAssignYouRolled">You Rolled</string>
     <string name="StatStrength">Strength</string>
     <string name="StatDexterity">Dexterity</string>
-    <string name="StatConstitution" >Constitution</string>
+    <string name="StatConstitution">Constitution</string>
     <string name="StatIntelligence">Intelligence</string>
     <string name="StatWisdom">Wisdom</string>
     <string name="StatCharisma">Charisma</string>
+    //Added 28-11-19
+    <string name="string_3d6">3D6</string>
+    <string name="string_1d20">1D20</string>
+    <string name="string_4d6">4D6</string>
+    <string name="string_4d6Drop">4D6 (Drop Lowest)</string>
+    <string name="string_statExtraRoll">Add an Extra Roll?</string>
+    <string name="string_statRollTitle">Choose a method of stat rolling.</string>
+    <string name="string_youRolled">You Rolled</string>
+    <string name="string_stat_str">Strength</string>
+    <string name="string_stat_dex">Dexterity</string>
+    <string name="string_stat_con">Constitution</string>
+    <string name="string_stat_int">Intelligence</string>
+    <string name="string_stat_wis">Wisdom</string>
+    <string name="string_stat_cha">Charisma</string>
+    <string name="string_racialBonusesTitle">Racial Bonuses</string>
+    <string name="string_proceed">Proceed</string>
+    <string name="string_promptName">Enter Name...</string>
+    //Added 28-11-19
+    <string-array name="races_array">
+        <item>Human</item>
+        <item>Elf</item>
+        <item>Dwarf</item>
+        <item>Halfling</item>
+    </string-array>
+    <string-array name="classes_array">
+        <item>Fighter</item>
+        <item>Rogue</item>
+        <item>Wizard</item>
+        <item>Cleric</item>
+    </string-array>
 </resources>
