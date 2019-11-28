@@ -18,6 +18,11 @@ import com.google.android.gms.tasks.Task;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.Arrays;
 import java.util.List;
@@ -27,6 +32,9 @@ public class LoginActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private static final int RC_SIGN_IN = 123;
     private static final String TAG = "LoginActivity";
+    FirebaseDatabase databaseCharacterSheets;
+    DatabaseReference myRef;
+    public static String id ="";
 
     /**
         Sets up the Firebase Authentication and the Action Listener to update UI as needed.
@@ -88,6 +96,29 @@ public class LoginActivity extends AppCompatActivity {
                             "displayName=" + user.getDisplayName() + ", " +
                             "email=" + user.getEmail() + ", " +
                             "uid=" + user.getUid());
+                    //Write user to database
+                    //Database write
+                    databaseCharacterSheets = FirebaseDatabase.getInstance();
+                    myRef = databaseCharacterSheets.getReference("Users");
+                    id = myRef.push().getKey();
+                    User aUser = new User(id,user.getEmail(), user.getDisplayName());
+                    myRef.push().setValue(aUser);
+                    // Read from the database
+                    myRef.addValueEventListener(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(DataSnapshot dataSnapshot) {
+                            // This method is called once with the initial value and again
+                            // whenever data at this location is updated.
+                            String value = dataSnapshot.getValue(String.class);
+                            Log.d(TAG, "Value is: " + value);
+                        }
+
+                        @Override
+                        public void onCancelled(DatabaseError error) {
+                            // Failed to read value
+                            Log.w(TAG, "Failed to read value.", error.toException());
+                        }
+                    });
                 } else {
                     if (response == null) {
                         showPopupMessage("Sign in cancelled!");

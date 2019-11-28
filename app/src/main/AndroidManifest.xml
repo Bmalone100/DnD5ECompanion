@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".StatRollerStyleSelection5e"></activity>
+        <activity android:name=".CreateCharacter5eActivity"></activity>
+        <activity android:name=".StatRollerStyleSelection5e" />
         <activity android:name=".AssignStats5E" />
         <activity android:name=".CharacterViewer" />
         <activity android:name=".CharacterCreator" />

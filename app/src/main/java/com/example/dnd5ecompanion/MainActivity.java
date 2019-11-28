@@ -46,8 +46,8 @@ public class MainActivity extends AppCompatActivity {
      * Called when the user taps the New Character button
      */
     public void goToCharacterCreator(View view) {
-        Intent characterIntent = new Intent(this, CharacterCreator.class);
-        startActivity(characterIntent);
+        Intent rollerIntent = new Intent(this, StatRollerStyleSelection5e.class);
+        startActivity(rollerIntent);
     }
 
     /**

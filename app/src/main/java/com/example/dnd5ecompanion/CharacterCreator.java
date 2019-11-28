@@ -23,6 +23,13 @@ import java.util.HashMap;
 import java.util.Map;
 
 import static com.example.dnd5ecompanion.CharacterViewerAdapter.listOfCharacters;
+import static com.example.dnd5ecompanion.CreateCharacter5eActivity.cha;
+import static com.example.dnd5ecompanion.CreateCharacter5eActivity.con;
+import static com.example.dnd5ecompanion.CreateCharacter5eActivity.dex;
+import static com.example.dnd5ecompanion.CreateCharacter5eActivity.intel;
+import static com.example.dnd5ecompanion.CreateCharacter5eActivity.str;
+import static com.example.dnd5ecompanion.CreateCharacter5eActivity.theClass;
+import static com.example.dnd5ecompanion.CreateCharacter5eActivity.wis;
 
 public class CharacterCreator extends AppCompatActivity {
     //Variables Needed for class methods
@@ -69,9 +76,9 @@ public class CharacterCreator extends AppCompatActivity {
 
         //Database write
         databaseCharacterSheets = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = databaseCharacterSheets.getReference("CharacterSheets");
+        DatabaseReference myRef = databaseCharacterSheets.getReference("Users/CharacterSheets");
         id = myRef.push().getKey();
-        characterSheet aCharacter = new characterSheet(id,name,race);
+        characterSheet aCharacter = new characterSheet(id,name,race,theClass,str,dex,con,intel,wis,cha);
         myRef.push().setValue(aCharacter);
         //showPopupMessage(name + "Added");
         // Read from the database
