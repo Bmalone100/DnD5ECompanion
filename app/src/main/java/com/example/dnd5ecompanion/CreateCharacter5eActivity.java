@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
@@ -13,7 +14,7 @@ import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class CreateCharacter5eActivity extends AppCompatActivity {
+public class CreateCharacter5eActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
     public static String str;
     public static String dex;
     public static String con;
@@ -71,17 +72,19 @@ public class CreateCharacter5eActivity extends AppCompatActivity {
         cha = temp;
 
         Spinner spinnerRace = (Spinner) findViewById(R.id.spinner_race);
+        spinnerRace.setOnItemSelectedListener(this);
         ArrayAdapter<CharSequence> adapterRace = ArrayAdapter.createFromResource(this, R.array.races_array, android.R.layout.simple_spinner_item);
         adapterRace.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerRace.setAdapter(adapterRace);
 
         Spinner spinnerClass = (Spinner) findViewById(R.id.spinner_class);
+        spinnerClass.setOnItemSelectedListener(this);
         ArrayAdapter<CharSequence> adapterClass = ArrayAdapter.createFromResource(this, R.array.classes_array, android.R.layout.simple_spinner_item);
         adapterClass.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerClass.setAdapter(adapterClass);
 
-        race = spinnerRace.getSelectedItem().toString();
-        theClass = spinnerClass.getSelectedItem().toString();
+        race = spinnerRace.getOnItemSelectedListener().toString();
+        theClass = spinnerClass.getOnItemSelectedListener().toString();
 
         //Database write
         databaseCharacterSheets = FirebaseDatabase.getInstance();
@@ -89,6 +92,13 @@ public class CreateCharacter5eActivity extends AppCompatActivity {
         id = myRef.push().getKey();
         characterSheet aCharacter = new characterSheet(id,name,race,theClass,str,dex,con,intel,wis,cha);
         myRef.push().setValue(aCharacter);
+    }
+
+    public void onItemSelected(AdapterView<?> parent, View view,
+                               int pos, long id) {
+    }
+    public void onNothingSelected(AdapterView<?> parent) {
+        // Another interface callback
     }
 
     public void statHelp(View view) {
