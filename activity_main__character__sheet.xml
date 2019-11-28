@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Main_Character_Sheet">
+
+    <TextView
+        android:id="@+id/CON_View"
+        android:layout_width="34dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="48dp"
+        android:text="CON"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/DEX_View" />
+
+    <TextView
+        android:id="@+id/DEX_View"
+        android:layout_width="36dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="48dp"
+        android:text="DEX"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/STR_view" />
+
+    <TextView
+        android:id="@+id/STR_view"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="64dp"
+        android:text="STR"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/INT_View"
+        android:layout_width="41dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="32dp"
+        android:text="INT"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/WIS_View"
+        android:layout_width="40dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="32dp"
+        android:text="WIS"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/INT_View" />
+
+    <TextView
+        android:id="@+id/CHA_View"
+        android:layout_width="39dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="32dp"
+        android:text="CHA"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/WIS_View" />
+
+    <TextView
+        android:id="@+id/Name_view"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_marginTop="24dp"
+        android:text="Name:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/STR_mod_view"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="64dp"
+        android:text="TextView"
+        app:layout_constraintStart_toEndOf="@+id/STR_view"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/DEX_mod_view"
+        android:layout_width="35dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="48dp"
+        android:text="TextView"
+        app:layout_constraintStart_toEndOf="@+id/DEX_View"
+        app:layout_constraintTop_toBottomOf="@+id/STR_mod_view" />
+
+    <TextView
+        android:id="@+id/CON_mod_view"
+        android:layout_width="36dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="48dp"
+        android:text="TextView"
+        app:layout_constraintStart_toEndOf="@+id/CON_View"
+        app:layout_constraintTop_toBottomOf="@+id/DEX_mod_view" />
+
+    <TextView
+        android:id="@+id/INT_mod_view"
+        android:layout_width="43dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="8dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toStartOf="@+id/INT_View"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/WIS_mod_view"
+        android:layout_width="45dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="8dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toStartOf="@+id/WIS_View"
+        app:layout_constraintTop_toBottomOf="@+id/INT_mod_view" />
+
+    <TextView
+        android:id="@+id/AC view"
+        android:layout_width="36dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="32dp"
+        android:text="AC"
+        app:layout_constraintEnd_toStartOf="@+id/WIS_mod_view"
+        app:layout_constraintStart_toEndOf="@+id/DEX_mod_view"
+        app:layout_constraintTop_toTopOf="@+id/WIS_mod_view" />
+
+    <TextView
+        android:id="@+id/CHA_mod_view"
+        android:layout_width="44dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="8dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toStartOf="@+id/CHA_View"
+        app:layout_constraintTop_toBottomOf="@+id/WIS_mod_view" />
+
+    <TextView
+        android:id="@+id/AC text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Armour class"
+        app:layout_constraintBottom_toTopOf="@+id/AC view"
+        app:layout_constraintEnd_toStartOf="@+id/WIS_mod_view"
+        app:layout_constraintStart_toEndOf="@+id/DEX_mod_view" />
+
+    <TextView
+        android:id="@+id/HP text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Health"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Name_view" />
+
+    <TextView
+        android:id="@+id/HP_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="HP"
+        app:layout_constraintBottom_toTopOf="@+id/AC text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/HP text"
+        app:layout_constraintVertical_bias="0.377" />
+
+    <TextView
+        android:id="@+id/speed_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Speed"
+        app:layout_constraintEnd_toStartOf="@+id/CHA_mod_view"
+        app:layout_constraintHorizontal_bias="0.57"
+        app:layout_constraintStart_toEndOf="@+id/CON_mod_view"
+        app:layout_constraintTop_toTopOf="@+id/CHA_mod_view" />
+
+    <TextView
+        android:id="@+id/SPEED_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="xx"
+        app:layout_constraintEnd_toStartOf="@+id/CHA_mod_view"
+        app:layout_constraintStart_toEndOf="@+id/CON_mod_view"
+        app:layout_constraintTop_toBottomOf="@+id/speed_text" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
