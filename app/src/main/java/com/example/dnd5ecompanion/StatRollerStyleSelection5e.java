@@ -7,18 +7,22 @@ import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.CheckBox;
+import android.widget.TextView;
 
 import com.google.android.material.snackbar.Snackbar;
-
+/**
+ * Author Colm
+ * This class rolls stats in multiple methods for use in stat assignment
+ */
 public class StatRollerStyleSelection5e extends AppCompatActivity {
-    public static final String EXTRA_MESSAGE = "com.example.myapplication.MESSAGE";
+    public static String EXTRA_MESSAGE = "";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_stat_roller_style_selection5e);
     }
 
-    int rollAmount = 0;
+    int rollAmount = 6;
     int rolled = 0;
     int lowRoll = 0;
     int randomRoll = 0;
@@ -110,6 +114,7 @@ public class StatRollerStyleSelection5e extends AppCompatActivity {
         Intent intent = new Intent(this, AssignStats5E.class);
         intent.putExtra(EXTRA_MESSAGE, message);
         startActivity(intent);
+
     }
 
     public void statHelp(View view) {

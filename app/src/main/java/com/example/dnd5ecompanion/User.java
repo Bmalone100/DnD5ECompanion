@@ -1,5 +1,8 @@
 package com.example.dnd5ecompanion;
-
+/**
+ * Author Brian
+ * This class is for a user object to write to database.
+ */
 public class User {
         private String name;
         private String email;

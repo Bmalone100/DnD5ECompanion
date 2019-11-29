@@ -7,7 +7,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 
 import static com.example.dnd5ecompanion.CharacterViewerAdapter.listOfCharacters;
-
+/**
+ * Author Brian
+ * This class was intended to be used for a recycler view
+ */
 public class CharacterViewer extends AppCompatActivity {
     private RecyclerView recyclerView;
     private RecyclerView.Adapter mAdapter;

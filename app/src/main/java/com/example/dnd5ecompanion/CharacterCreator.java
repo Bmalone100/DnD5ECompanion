@@ -1,4 +1,4 @@
-/*package com.example.dnd5ecompanion;
+package com.example.dnd5ecompanion;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
@@ -30,7 +30,12 @@ import static com.example.dnd5ecompanion.CreateCharacter5eActivity.intel;
 import static com.example.dnd5ecompanion.CreateCharacter5eActivity.str;
 import static com.example.dnd5ecompanion.CreateCharacter5eActivity.theClass;
 import static com.example.dnd5ecompanion.CreateCharacter5eActivity.wis;
+/**
+ * Author Brian
+ * This class was used to test database writing.
+ */
 
+/*
 public class CharacterCreator extends AppCompatActivity {
     //Variables Needed for class methods
     public static String id ="";

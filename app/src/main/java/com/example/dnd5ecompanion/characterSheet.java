@@ -1,5 +1,8 @@
 package com.example.dnd5ecompanion;
-
+/**
+ * Author Frank
+ * This class contains the object that is written to the database.
+ */
 public class characterSheet {
     private String id;
     private String name;
@@ -54,9 +57,6 @@ public class characterSheet {
     public String getWis(){return wis;}
 
     public String getCha(){return cha;}
-
-
-
 
     /*
     public String toString(){

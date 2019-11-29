@@ -19,7 +19,10 @@ import com.google.firebase.auth.FirebaseUser;
 
 import java.util.Arrays;
 import java.util.List;
-
+/**
+ * Author Brian
+ * Initial Screen
+ */
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -36,13 +39,6 @@ public class MainActivity extends AppCompatActivity {
         startActivity(loginIntent);
 }
     /**
-     * Called when the user taps the Help button
-     */
-    public void goToHelp(View view) {
-        //Intent intent = new Intent(this, help.class);
-        //startActivity(intent);
-    }
-    /**
      * Called when the user taps the New Character button
      */
     public void goToCharacterCreator(View view) {
@@ -54,8 +50,8 @@ public class MainActivity extends AppCompatActivity {
      * Called when the user taps the Existing Character button
      */
     public void goToCharacter(View view) {
-        //Intent intent = new Intent(this, FirebaseUIActivity.class);
-        //startActivity(intent);
+        Intent sheetIntent = new Intent(this, Main_Character_Sheet.class);
+        startActivity(sheetIntent);
     }
 
 

@@ -3,6 +3,7 @@ package com.example.dnd5ecompanion;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -15,6 +16,15 @@ import android.widget.TextView;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+
+import static com.example.dnd5ecompanion.StatRollerStyleSelection5e.EXTRA_MESSAGE;
+
+/**
+ * Author Brian, Colm, Frank
+ * This class assembles the character
+ * Brian implemented database,
+ * Frank & Colm implemented spinners & stats.
+ */
 
 public class CreateCharacter5eActivity extends AppCompatActivity {
     public static String str;
@@ -148,5 +158,9 @@ public class CreateCharacter5eActivity extends AppCompatActivity {
         id = myRef.push().getKey();
         characterSheet aCharacter = new characterSheet(id,name,race,theClass,str,dex,con,intel,wis,cha);
         myRef.push().setValue(aCharacter);
+
+        Intent viewCharIntent = new Intent(this, Main_Character_Sheet.class);
+        startActivity(viewCharIntent);
+
     }
 }

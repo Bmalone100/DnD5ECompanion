@@ -26,7 +26,10 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.Arrays;
 import java.util.List;
-
+/**
+ * Author Brian
+ * This class deals with firebase authentication/user login
+ */
 public class LoginActivity extends AppCompatActivity {
 
     private FirebaseAuth mAuth;

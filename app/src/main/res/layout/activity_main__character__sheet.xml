@@ -8,67 +8,67 @@
 
     <TextView
         android:id="@+id/CON_View"
-        android:layout_width="55dp"
+        android:layout_width="100dp"
         android:layout_height="52dp"
-        android:layout_marginStart="32dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
-        android:text="CON"
+        android:text="@string/StatConstitution"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/DEX_View" />
 
     <TextView
         android:id="@+id/DEX_View"
-        android:layout_width="55dp"
+        android:layout_width="100dp"
         android:layout_height="52dp"
-        android:layout_marginStart="32dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
-        android:text="DEX"
+        android:text="@string/StatDexterity"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/STR_view" />
 
     <TextView
         android:id="@+id/STR_view"
-        android:layout_width="55dp"
+        android:layout_width="100dp"
         android:layout_height="52dp"
-        android:layout_marginStart="32dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="64dp"
-        android:text="STR"
+        android:text="@string/StatStrength"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/INT_View"
-        android:layout_width="55dp"
+        android:layout_width="100dp"
         android:layout_height="52dp"
         android:layout_marginTop="64dp"
         android:layout_marginEnd="32dp"
-        android:text="INT"
+        android:text="@string/StatIntelligence"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/WIS_View"
-        android:layout_width="55dp"
+        android:layout_width="100dp"
         android:layout_height="52dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
-        android:text="WIS"
+        android:text="@string/StatWisdom"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/INT_View" />
 
     <TextView
         android:id="@+id/CHA_View"
-        android:layout_width="55dp"
+        android:layout_width="100dp"
         android:layout_height="52dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
-        android:text="CHA"
+        android:text="@string/StatCharisma"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/WIS_View" />
 
     <TextView
         android:id="@+id/Name_view"
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="32dp"
         android:layout_marginTop="24dp"
         android:text="TextView"
@@ -78,7 +78,7 @@
 
     <TextView
         android:id="@+id/STR_mod_view"
-        android:layout_width="55dp"
+        android:layout_width="65dp"
         android:layout_height="52dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="64dp"
@@ -88,7 +88,7 @@
 
     <TextView
         android:id="@+id/DEX_mod_view"
-        android:layout_width="55dp"
+        android:layout_width="65dp"
         android:layout_height="52dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="32dp"
@@ -98,7 +98,7 @@
 
     <TextView
         android:id="@+id/CON_mod_view"
-        android:layout_width="55dp"
+        android:layout_width="65dp"
         android:layout_height="52dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="32dp"
@@ -108,7 +108,7 @@
 
     <TextView
         android:id="@+id/INT_mod_view"
-        android:layout_width="55dp"
+        android:layout_width="65dp"
         android:layout_height="52dp"
         android:layout_marginTop="64dp"
         android:layout_marginEnd="8dp"
@@ -118,7 +118,7 @@
 
     <TextView
         android:id="@+id/WIS_mod_view"
-        android:layout_width="55dp"
+        android:layout_width="65dp"
         android:layout_height="52dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="8dp"
@@ -128,7 +128,7 @@
 
     <TextView
         android:id="@+id/CHA_mod_view"
-        android:layout_width="55dp"
+        android:layout_width="65dp"
         android:layout_height="52dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="8dp"

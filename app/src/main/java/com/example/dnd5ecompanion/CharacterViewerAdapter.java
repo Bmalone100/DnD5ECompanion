@@ -8,6 +8,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
+/**
+ * Author Brian
+ * This class was intended to be used for a recycler view
+ */
 public class CharacterViewerAdapter extends RecyclerView.Adapter<CharacterViewerAdapter.MyViewHolder> {
     public static ArrayList<characterSheet> listOfCharacters = new ArrayList<>();
     // Provide a reference to the views for each data item
