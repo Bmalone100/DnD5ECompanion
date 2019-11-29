@@ -1,4 +1,4 @@
-package com.example.dnd5ecompanion;
+/*package com.example.dnd5ecompanion;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
@@ -103,4 +103,4 @@ public class CharacterCreator extends AppCompatActivity {
         //Intent mainIntent = new Intent(this, MainActivity.class);
         //startActivity(mainIntent);
     }
-}
+}*/

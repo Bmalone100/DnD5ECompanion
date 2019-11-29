@@ -13,11 +13,9 @@
         <activity android:name=".StatRollerStyleSelection5e" />
         <activity android:name=".AssignStats5E" />
         <activity android:name=".CharacterViewer" />
-        <activity android:name=".CharacterCreator" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".Main_Character_Sheet"></activity>
-        <activity android:name=".AssignStats5E" />
-        <activity android:name=".StatRollerStyleSelection5e" />
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

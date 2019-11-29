@@ -1,9 +1,12 @@
 package com.example.dnd5ecompanion;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
@@ -25,6 +28,8 @@ public class CreateCharacter5eActivity extends AppCompatActivity {
     public static String name ="";
     public static String race = "";
 
+    private static final String TAG = "CrCh5eActivity";
+
     public static String theClass = "";
     FirebaseDatabase databaseCharacterSheets;
     DatabaseReference myRef;
@@ -33,9 +38,6 @@ public class CreateCharacter5eActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_character_5e);
-
-        EditText details = findViewById(R.id.text_enterText);
-        name = details.getText().toString();
 
         Bundle stats = getIntent().getBundleExtra("Stats Bundle");
         String temp = "";
@@ -70,34 +72,77 @@ public class CreateCharacter5eActivity extends AppCompatActivity {
         stat_show_cha.setText(temp);
         cha = temp;
 
+        obtainName();
+        obtainRace();
+        obtainClass();
+    }
+
+    public void obtainRace(){
+        //Input retrieval
         Spinner spinnerRace = (Spinner) findViewById(R.id.spinner_race);
         ArrayAdapter<CharSequence> adapterRace = ArrayAdapter.createFromResource(this, R.array.races_array, android.R.layout.simple_spinner_item);
         adapterRace.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerRace.setAdapter(adapterRace);
 
+        spinnerRace.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+                race = ((Spinner)findViewById(R.id.spinner_race)).getSelectedItem().toString();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parentView) {
+                showPopupMessage("Race: " + race + " Class: " + theClass);
+            }
+
+        });
+    }
+    public void obtainClass(){
+        //Input retrieval
         Spinner spinnerClass = (Spinner) findViewById(R.id.spinner_class);
         ArrayAdapter<CharSequence> adapterClass = ArrayAdapter.createFromResource(this, R.array.classes_array, android.R.layout.simple_spinner_item);
         adapterClass.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerClass.setAdapter(adapterClass);
 
-        race = spinnerRace.getSelectedItem().toString();
-        theClass = spinnerClass.getSelectedItem().toString();
+        spinnerClass.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+                theClass = ((Spinner)findViewById(R.id.spinner_class)).getSelectedItem().toString();
+            }
 
-        //Database write
-        databaseCharacterSheets = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = databaseCharacterSheets.getReference("Users/CharacterSheets");
-        id = myRef.push().getKey();
-        characterSheet aCharacter = new characterSheet(id,name,race,theClass,str,dex,con,intel,wis,cha);
-        myRef.push().setValue(aCharacter);
+            @Override
+            public void onNothingSelected(AdapterView<?> parentView) {
+                showPopupMessage("Race: " + race + " Class: " + theClass);
+            }
+
+        });
+
+    }
+
+    public void obtainName(){
+        //Input retrieval
+        EditText details = findViewById(R.id.text_enterText);
+        name = details.getText().toString();
+    }
+
+    private void showPopupMessage(String message) {
+        Log.e(TAG, message);
+        CoordinatorLayout coordinatorLayout = findViewById(R.id.coordinator_layout);
+        Snackbar.make(coordinatorLayout, message,
+                Snackbar.LENGTH_INDEFINITE)
+                .show();
     }
 
     public void statHelp(View view) {
-        Snackbar.make(view, "This page lets you enter a name for your character and use drop downs to choose a class and race.", Snackbar.LENGTH_INDEFINITE)
+        Snackbar.make(view, " Race: " + race + " Class: " + theClass, Snackbar.LENGTH_INDEFINITE)
                 .setAction("Action", null).show();
     }
 
     public void publishToDatabase(View view) {
         //Database write
+        obtainName();
+        obtainRace();
+        obtainClass();
         databaseCharacterSheets = FirebaseDatabase.getInstance();
         myRef = databaseCharacterSheets.getReference("Users/CharacterSheets");
         id = myRef.push().getKey();
